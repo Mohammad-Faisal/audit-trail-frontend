@@ -1,14 +1,13 @@
-import {BaseRequest} from "../../../utils/BaseRequest";
+import BaseRequest from "../../../utils/BaseRequest";
 
-export class SignInRequest extends BaseRequest{
+export  class SignInRequest extends BaseRequest{
 
     email:string='';
     password:string=''
 
     constructor(values:SignInInputs) {
         super();
-        this.email = values.email
-        this.password = values.password
+        this.update(values)
     }
 }
 

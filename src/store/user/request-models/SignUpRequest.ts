@@ -1,4 +1,4 @@
-import {BaseRequest} from "../../../utils/BaseRequest";
+import BaseRequest from "../../../utils/BaseRequest";
 
 export class SignUpRequest extends BaseRequest{
 

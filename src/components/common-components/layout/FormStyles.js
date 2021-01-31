@@ -14,9 +14,17 @@ export const FormBasicContainer = styled(Card)`
     margin-bottom: 20px;
     margin-top: 20px;
 `
+
 export const FormItemContainer = styled.div`
   display: grid;
   grid-column-gap: 10px;
   margin-top: 10px;
   grid-template-columns: 1fr;
+`
+
+export const PageTopContainer = styled.div`
+    margin-bottom: 20px;
+    margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr auto;
 `

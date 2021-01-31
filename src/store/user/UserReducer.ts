@@ -1,5 +1,6 @@
 import {createReducer} from "@reduxjs/toolkit";
 import {UserAction} from "./UserAction";
+import {ActionUtility} from "../utils/ActionUtility";
 
 const initialState ={
     userInfo:{},
@@ -7,11 +8,11 @@ const initialState ={
 }
 
 const userReducer = createReducer(initialState, {
-    [UserAction.SIGN_IN]:(state , action) => {
+    [ActionUtility.getFulfilledAction(UserAction.SIGN_IN)]:(state , action) => {
         state.userInfo=action.payload
         state.isLoggedIn = true;
     },
-    [UserAction.SIGN_UP]:(state , action) => {
+    [ActionUtility.getFulfilledAction(UserAction.SIGN_UP)]:(state , action) => {
         state.userInfo= action.payload
         state.isLoggedIn = true;
     },

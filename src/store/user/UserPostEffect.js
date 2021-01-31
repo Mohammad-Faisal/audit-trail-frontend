@@ -1,11 +1,20 @@
-import {RootState} from "../index";
-import {MiddlewareArray} from "@reduxjs/toolkit";
+import {ActionUtility} from "../utils/ActionUtility";
+import {UserAction} from "./UserAction";
 
 const userMiddleware = (state) => next => action => {
 
     const { getState, dispatch } = state;
 
+
     console.log("this is coming from middleware" , state , action)
+
+
+    switch (action.type) {
+        case ActionUtility.getFulfilledAction(UserAction.SIGN_IN):
+        case ActionUtility.getFulfilledAction(UserAction.SIGN_UP):
+            localStorage.setItem('JWT_TOKEN', action.payload?.data?.jwtToken)
+            break;
+    }
 
     next(action)
 }

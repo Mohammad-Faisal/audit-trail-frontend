@@ -17,8 +17,6 @@ const errorReducer = createReducer(initialState, (builder) => {
         .addMatcher(
             (action) => action.type.endsWith('/rejected'),
             (state, action) => {
-                console.log(action,"is rejected");
-
                 const requestName = action.type.replace('/rejected', '')
                 state[requestName] = action.error.message
             }

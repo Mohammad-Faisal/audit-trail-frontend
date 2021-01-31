@@ -1,6 +1,6 @@
 import React, {FC} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {FormBasicContainer} from "./common/FormStyles";
+import {FormBasicContainer} from "../common-components/layout/FormStyles";
 import {FormInputText} from "./common/FormInputText";
 import ButtonFormSubmit from "../buttons/ButtonFormSubmit";
 import {useTranslation} from "react-i18next";

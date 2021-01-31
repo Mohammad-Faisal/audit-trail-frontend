@@ -1,9 +1,8 @@
 import {FC, useState} from "react";
 import {Button, Modal} from "antd";
-import {FormEditSites} from "../forms/FormEditSite";
+import {FormEditSites, FormState} from "../forms/FormSite";
 import {SiteAction} from "../../store/site/SiteAction";
 import {useDispatch} from "react-redux";
-
 
 
 export type Site = {
@@ -38,7 +37,7 @@ export const ModalEditForm:FC<Props> = ({siteData}: Props) => {
         onOk={() => setVisibility(false)}
         onCancel={() => setVisibility(false)}
     >
-        <FormEditSites />
+        <FormEditSites formState={FormState.UPDATE}/>
     </Modal>
     </>
 }

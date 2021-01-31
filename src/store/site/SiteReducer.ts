@@ -1,5 +1,6 @@
 import {createReducer} from "@reduxjs/toolkit";
 import {SiteAction} from "./SiteAction";
+import {ActionUtility} from "../utils/ActionUtility";
 
 const initialState ={
     sites:[],
@@ -7,8 +8,8 @@ const initialState ={
 }
 
 const siteReducer = createReducer(initialState, {
-    [SiteAction.GET_SITES_FINISHED]:(state , action) => {
-        state.sites=action.payload
+    [ActionUtility.getFulfilledAction(SiteAction.GET_SITES)]:(state , action) => {
+        state.sites=action.payload.data
     },
     [SiteAction.CLEAR_SITE]:(state , action) => {
         state.sites= []

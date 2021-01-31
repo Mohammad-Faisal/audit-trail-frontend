@@ -10698,6 +10698,11 @@ sisteransi@^1.0.5:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
   integrity sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
 
+sjs-base-model@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/sjs-base-model/-/sjs-base-model-1.9.1.tgz#4d74194f5252480d120bbbc11b1beb29d90ba904"
+  integrity sha512-TmF6Nn66tvpVQmIOZAyw0kcBlKUmn5oZp3BhfvDBadzkk8do5yp644gM++RmDhoDV0hu785UrO9g85sYBApXkA==
+
 slash@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"

@@ -17,8 +17,8 @@ const rootReducer = {
 
 const middleware = [
     ...getDefaultMiddleware(),
-    siteMiddleware,
-    userMiddleware
+    userMiddleware,
+    siteMiddleware
 ];
 
 
@@ -30,9 +30,5 @@ const rootStore = configureStore({
 
 
 export type RootState = ReturnType<typeof rootStore.getState>
-
-
-
-
 
 export default rootStore;

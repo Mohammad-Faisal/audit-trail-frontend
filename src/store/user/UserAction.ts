@@ -2,10 +2,8 @@ import {createAction, createAsyncThunk} from "@reduxjs/toolkit";
 import {getDataFromRemote} from "../../utils/HttpUtility";
 import {SignInRequest} from "./request-models/SignInRequest";
 import {SignUpRequest} from "./request-models/SignUpRequest";
+import {UserEffect} from "./UserEffect";
 
-function withPayloadType<T>() {
-    return (t: T) => ({ payload: t })
-}
 
 export class UserAction {
 
@@ -14,11 +12,13 @@ export class UserAction {
     static SIGN_OUT = "SIGN_OUT"
 
     static signUp = createAsyncThunk(UserAction.SIGN_UP, async (request: SignUpRequest) => {
-        return await getDataFromRemote()
+        return await UserEffect.signUp(request)
     });
 
     static signIn = createAsyncThunk(UserAction.SIGN_IN, async (request: SignInRequest) => {
-        return await getDataFromRemote()
+        return await UserEffect.signIn(request)
     });
+
+    static signOut = createAction(UserAction.SIGN_OUT)
 
 }
