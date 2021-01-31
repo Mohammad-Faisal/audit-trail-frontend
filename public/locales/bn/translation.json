@@ -1,0 +1,13 @@
+{
+  "sign_in_title": "Sign IN",
+  "sign_up_title": "Sign UP",
+  "form_input_label": {
+    "name": "Name",
+    "email": "Email",
+    "password": "Password"
+  },
+  "form_submit": {
+    "sign_in": "Sign IN",
+    "sign_up": "Sign UP"
+  }
+}
