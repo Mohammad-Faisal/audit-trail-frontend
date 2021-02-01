@@ -1,21 +1,28 @@
 import {createReducer} from "@reduxjs/toolkit";
 import CommonAction from "./CommonAction";
+import {Notification} from "./general-models/Notification";
+import {NotificationType} from "./general-models/NotificationType";
 
-export interface ModalStatus {
-    message: string;
-    status:boolean;
-    type:string;
+interface ICommonState {
+    modalNotification:  Notification,
+    toastNotification:  Notification,
 }
 
-const initialState ={
-    modalStatus:{},
+const initialState: ICommonState = {
+    modalNotification: new Notification('Default Notification' , NotificationType.DEFAULT),
+    toastNotification:  new Notification('Default Notification' , NotificationType.DEFAULT),
 }
 
 const commonReducer = createReducer(initialState, {
 
-    [CommonAction.SET_MODAL_STATUS]:(state , action) => {
-        state.modalStatus= action.payload
+    [CommonAction.SHOW_MODAL]:(state , action) => {
+        state.modalNotification= action.payload
     },
+
+    [CommonAction.SHOW_TOAST]:(state , action) => {
+        state.toastNotification= action.payload
+    },
+
 });
 
 export default commonReducer;

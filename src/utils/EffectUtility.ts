@@ -5,16 +5,13 @@ export default class EffectUtility {
 
     static async _postToModel(Model:any, endpoint:string, data:any) {
         const response = await HttpUtility.post(endpoint, data);
-        return EffectUtility._restModelCreator(Model, response)
+        return EffectUtility._restModelCreator(Model, response);
     }
 
     static _restModelCreator(Model:any, response:any) {
-        if (response instanceof HttpErrorResponseModel) {
-            return response
-        }
-        const temp = !Array.isArray(response.data)
+        if (response instanceof HttpErrorResponseModel)  return response
+        return !Array.isArray(response.data)
             ? new Model(response.data)
-            : response.data.map((json:any) => new Model(json))
-        return temp
+            : response.data.map((json: any) => new Model(json))
     }
 }

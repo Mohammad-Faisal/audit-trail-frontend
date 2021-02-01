@@ -7,6 +7,7 @@ import userMiddleware from "./user/UserPostEffect";
 import userReducer from "./user/UserReducer";
 import finishedReducer from "./misc/finished/FinishedReducer";
 import commonReducer from "./misc/common/CommonReducer";
+import errorPostEffect from "./misc/error/ErrorPostEffect";
 
 const rootReducer = {
     site: siteReducer ,
@@ -21,6 +22,7 @@ const rootReducer = {
 
 const middleware = [
     ...getDefaultMiddleware(),
+    errorPostEffect,
     userMiddleware,
     siteMiddleware
 ];

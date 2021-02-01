@@ -7,7 +7,8 @@ import {ModalAuthentication} from "./modals/ModalAuthentication";
 import {Topbar} from "./common-components/navigation/Topbar";
 import {Card, PageTopContainer} from "./common-components/layout/FormStyles";
 import {ModalCreateForm} from "./modals/ModalCreateForm";
-import ModalMessage from "./modals/ModalMessage";
+import {ModalMessage} from "./common-components/notification/ModalMessage";
+import {ToastMessage} from "./common-components/notification/ToastMessage";
 
 
 const App: FC = ()=> {
@@ -23,6 +24,7 @@ const App: FC = ()=> {
             <ModalAuthentication />
             <LoadingIndicator />
             <ModalMessage />
+            <ToastMessage/>
         </Suspense>
     </div>
   );
