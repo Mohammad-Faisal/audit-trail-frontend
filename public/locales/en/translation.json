@@ -5,6 +5,7 @@
     "name": "Name",
     "email": "Email",
     "password": "Password",
+    "description": "Description",
     "region": "Region Name",
     "lat": "Latitude",
     "lng": "Longitude"

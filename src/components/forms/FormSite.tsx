@@ -12,6 +12,7 @@ import ButtonFormSubmit from "../buttons/ButtonFormSubmit";
 import {FormBasicContainer} from "../common-components/layout/FormStyles";
 import {useTranslation} from "react-i18next";
 import {selectRequesting} from "../../store/misc/requesting/RequestingSelector";
+import {selectFinished} from "../../store/misc/finished/FinishedSelector";
 
 export enum FormState {
     CREATE,
@@ -40,11 +41,12 @@ export const FormEditSites : FC<Props> = ({formState}) => {
 
     const {t} = useTranslation();
     const { control, values  } = useFormInputValidation(INITIAL_STATE, VALIDATION_SCHEMA)
-    const isRequesting = useSelector(state => selectRequesting(state , [SiteAction.CREATE_SITE , SiteAction.UPDATE_SITE]))
+    const isRequesting = useSelector(state => selectRequesting(state , [SiteAction.CREATE_SITE]))
 
     const dispatch = useDispatch();
 
     const siteData = useSelector(selectSiteDataForEdit)
+
 
     const onSubmit = () => {
         if(formState === FormState.UPDATE)dispatch(SiteAction.updateSite(new CreateOrUpdateSiteRequest(values)))
@@ -55,8 +57,9 @@ export const FormEditSites : FC<Props> = ({formState}) => {
         control.setAllValues(siteData)
     },[siteData])
 
+
     return  <FormBasicContainer>
-        {formState === FormState.UPDATE && <h2> Site ID: </h2>}
+        {formState === FormState.UPDATE && <h2> Site ID: {siteData.id}</h2>}
         {formState === FormState.CREATE && <h2> Create New Site </h2>}
         <FormInputText label={t('form_input_label.name')} control={control} name={'name'} />
         <FormInputText label={t('form_input_label.description')} control={control} name={'description'}/>

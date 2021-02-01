@@ -5,16 +5,21 @@ import {SiteAction} from "../../store/site/SiteAction";
 import {Button, Table} from "antd";
 import {ModalEditForm, Site} from "../modals/ModalEditForm";
 import {GetSitesRequest} from "../../store/site/request-models/GetSitesRequest";
+import {selectLoggedInState} from "../../store/user/UserSelector";
+import {selectFinished} from "../../store/misc/finished/FinishedSelector";
 
 export const SiteTable: FC = () => {
 
     const dispatch = useDispatch();
-    const tableData = useSelector(selectSites)
+    const tableData = useSelector(selectSites);
+    const isSignedIn = useSelector(selectLoggedInState);
+    const isFinishedCreate = useSelector(state => selectFinished(state,[SiteAction.CREATE_SITE]))
+    const isFinishedUpdate = useSelector(state => selectFinished(state,[SiteAction.UPDATE_SITE]))
 
 
     useEffect(() => {
-        dispatch(SiteAction.getSites(new GetSitesRequest()))
-    },[dispatch])
+        if(isSignedIn)dispatch(SiteAction.getSites(new GetSitesRequest()))
+    },[dispatch,isSignedIn,isFinishedCreate,isFinishedUpdate])
 
     useEffect(() => {
         console.log(tableData)

@@ -1,8 +1,9 @@
-import {FC, useState} from "react";
+import {FC, useEffect, useState} from "react";
 import {Button, Modal} from "antd";
 import {FormEditSites, FormState} from "../forms/FormSite";
 import {SiteAction} from "../../store/site/SiteAction";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {selectFinished} from "../../store/misc/finished/FinishedSelector";
 
 
 export const ModalCreateForm:FC = () => {
@@ -10,9 +11,15 @@ export const ModalCreateForm:FC = () => {
 
     const dispatch = useDispatch();
     const [visibility  , setVisibility] = useState<boolean>(false);
+    const isFinished = useSelector(state => selectFinished(state,[SiteAction.CREATE_SITE]))
+
+
+    useEffect(() => {
+        if(isFinished)setVisibility(false);
+    },[isFinished])
 
     const showModal = () => {
-        dispatch(SiteAction.clearSiteData())
+        dispatch(SiteAction.clearSiteDataForEdit())
         setVisibility(true)
     }
 
@@ -21,8 +28,8 @@ export const ModalCreateForm:FC = () => {
 
         <Modal
             visible={visibility}
-            onOk={() => setVisibility(false)}
-            onCancel={() => setVisibility(false)}
+            closable={true}
+            footer={null}
         >
             <FormEditSites formState={FormState.CREATE}/>
         </Modal>

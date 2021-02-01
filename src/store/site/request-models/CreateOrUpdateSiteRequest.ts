@@ -2,7 +2,7 @@ import BaseRequest from "../../../utils/BaseRequest";
 
 export  class CreateOrUpdateSiteRequest extends BaseRequest{
 
-    siteId:string='';
+    id:string='';
     name:string='';
     description:string=''
     region:string=''

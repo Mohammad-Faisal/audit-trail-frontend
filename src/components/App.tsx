@@ -7,6 +7,7 @@ import {ModalAuthentication} from "./modals/ModalAuthentication";
 import {Topbar} from "./common-components/navigation/Topbar";
 import {Card, PageTopContainer} from "./common-components/layout/FormStyles";
 import {ModalCreateForm} from "./modals/ModalCreateForm";
+import ModalMessage from "./modals/ModalMessage";
 
 
 const App: FC = ()=> {
@@ -21,6 +22,7 @@ const App: FC = ()=> {
             <SiteTable />
             <ModalAuthentication />
             <LoadingIndicator />
+            <ModalMessage />
         </Suspense>
     </div>
   );

@@ -5,12 +5,16 @@ import {configureStore, getDefaultMiddleware} from "@reduxjs/toolkit";
 import siteMiddleware from "./site/SitePostEffect";
 import userMiddleware from "./user/UserPostEffect";
 import userReducer from "./user/UserReducer";
+import finishedReducer from "./misc/finished/FinishedReducer";
+import commonReducer from "./misc/common/CommonReducer";
 
 const rootReducer = {
     site: siteReducer ,
     user: userReducer ,
     error: errorReducer,
-    requesting: requestingReducer
+    requesting: requestingReducer,
+    finished: finishedReducer,
+    common: commonReducer,
 };
 
 

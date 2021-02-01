@@ -1,8 +1,10 @@
 import {createAction, createAsyncThunk} from "@reduxjs/toolkit";
-import {getDataFromRemote} from "../../utils/HttpUtility";
 import {GetSitesRequest} from "./request-models/GetSitesRequest";
 import {SiteEffect} from "./SiteEffect";
 import {CreateOrUpdateSiteRequest} from "./request-models/CreateOrUpdateSiteRequest";
+import {ApiEndpoints} from "../../constants/ApiEndpoints";
+import HttpUtility from "../../utils/HttpUtility";
+import BaseRequest from "../../utils/BaseRequest";
 
 function withPayloadType<T>() {
     return (t: T) => ({ payload: t })
@@ -15,20 +17,28 @@ export class SiteAction {
 
     static CLEAR_SITE = "CLEAR_SITE"
     static SET_SITE = "SET_SITE"
+    static CLEAR_SITE_DATA = "CLEAR_SITE_DATA"
 
     static getSites = createAsyncThunk(SiteAction.GET_SITES, async (request: GetSitesRequest) => {
-        return await SiteEffect.getSites(request);
+        const endPoint = ApiEndpoints.site.getSites
+        return await HttpUtility.post(endPoint, new BaseRequest(request));
+        //return await SiteEffect.getSites(request);
     });
 
     static createSite = createAsyncThunk(SiteAction.CREATE_SITE, async (request: CreateOrUpdateSiteRequest) => {
-        return await SiteEffect.createSite(request);
+        const endPoint = ApiEndpoints.site.createSite
+        return await HttpUtility.post(endPoint, new BaseRequest(request));
+        // return await SiteEffect.createSite(request);
     });
 
     static updateSite = createAsyncThunk(SiteAction.UPDATE_SITE, async (request: CreateOrUpdateSiteRequest) => {
-        return await SiteEffect.updateSite(request);
+        const endPoint = ApiEndpoints.site.updateSite
+        return await HttpUtility.post(endPoint, new BaseRequest(request));
+        //return await SiteEffect.updateSite(request);
     });
 
     static setSiteDataForEdit  = createAction(SiteAction.SET_SITE , withPayloadType<any>())
+    static clearSiteDataForEdit  = createAction(SiteAction.CLEAR_SITE_DATA)
 
     static clearSiteData = createAction(SiteAction.CLEAR_SITE);
 
