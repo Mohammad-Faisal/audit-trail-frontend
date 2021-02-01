@@ -16,7 +16,6 @@ export  class CreateOrUpdateSiteRequest extends BaseRequest{
 }
 
 export interface SiteInputs  {
-
     name:string;
     description:string;
     region:string;

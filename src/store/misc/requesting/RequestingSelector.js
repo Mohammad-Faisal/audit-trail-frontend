@@ -1,3 +1,3 @@
 export const selectRequesting = (state , actionTypes) => {
-    return state.requesting[`${actionTypes}`]
+    return actionTypes.some((actionType) => state.requesting[actionType])
 }

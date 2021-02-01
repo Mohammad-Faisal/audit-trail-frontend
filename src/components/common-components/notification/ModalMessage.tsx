@@ -10,12 +10,20 @@ export const ModalMessage = () => {
     const modalNotification: INotification | null = useSelector(selectModalNotification)
 
     useEffect(() => {
-        if(modalNotification.type === NotificationType.SUCCESS){
-            Modal.success({title: modalNotification.message})
+        switch (modalNotification.type){
+            case NotificationType.SUCCESS:
+                Modal.success({title: modalNotification.message});
+                break;
+            case NotificationType.ERROR:
+                Modal.error({title: modalNotification.message});
+                break;
+            case NotificationType.WARNING:
+                Modal.warning({title: modalNotification.message});
+                break;
         }
+
     },[modalNotification])
 
     return <div></div>
-
 
 }

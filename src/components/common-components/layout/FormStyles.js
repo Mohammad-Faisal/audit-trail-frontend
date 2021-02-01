@@ -10,7 +10,7 @@ export const Card = styled.div`
     padding: 10px;
 `
 
-export const FormBasicContainer = styled(Card)`
+export const FormBasicContainer = styled.div`
     margin-bottom: 20px;
     margin-top: 20px;
 `
@@ -23,8 +23,8 @@ export const FormItemContainer = styled.div`
 `
 
 export const PageTopContainer = styled.div`
-    margin-bottom: 20px;
-    margin-top: 20px;
+  text-align: center;
+  margin-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr auto;
 `

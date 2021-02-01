@@ -1,6 +1,6 @@
 import {FC, useEffect, useState} from "react";
 import {Button, Modal} from "antd";
-import {FormEditSites, FormState} from "../forms/FormSite";
+import {FormSite, FormState} from "../forms/FormSite";
 import {SiteAction} from "../../store/site/SiteAction";
 import {useDispatch, useSelector} from "react-redux";
 import {AuditLogTable} from "../tables/AuditLogTable";
@@ -41,10 +41,11 @@ export const ModalEditForm:FC<Props> = ({siteData}: Props) => {
         <Modal
             visible={visibility}
             closable={true}
+            maskClosable={true}
             footer={null}
         >
-            <FormEditSites formState={FormState.UPDATE}/>
-            <h1>Audit Log</h1>
+            <FormSite formState={FormState.UPDATE}/>
+            <h2>Audit Log</h2>
             <AuditLogTable tableData={siteData.changes} />
         </Modal>
     </>

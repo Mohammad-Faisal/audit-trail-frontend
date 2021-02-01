@@ -12,7 +12,6 @@ import ButtonFormSubmit from "../buttons/ButtonFormSubmit";
 import {FormBasicContainer} from "../common-components/layout/FormStyles";
 import {useTranslation} from "react-i18next";
 import {selectRequesting} from "../../store/misc/requesting/RequestingSelector";
-import {selectFinished} from "../../store/misc/finished/FinishedSelector";
 
 export enum FormState {
     CREATE,
@@ -37,13 +36,14 @@ interface Props {
     formState: FormState;
 }
 
-export const FormEditSites : FC<Props> = ({formState}) => {
-
-    const {t} = useTranslation();
-    const { control, values  } = useFormInputValidation(INITIAL_STATE, VALIDATION_SCHEMA)
-    const isRequesting = useSelector(state => selectRequesting(state , [SiteAction.CREATE_SITE]))
+export const FormSite : FC<Props> = ({formState}) => {
 
     const dispatch = useDispatch();
+    const {t} = useTranslation();
+    const { control, values  } = useFormInputValidation(INITIAL_STATE, VALIDATION_SCHEMA)
+    const isRequesting = useSelector(state => selectRequesting(state , [SiteAction.CREATE_SITE,SiteAction.UPDATE_SITE]))
+
+
 
     const siteData = useSelector(selectSiteDataForEdit)
 

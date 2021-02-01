@@ -41,8 +41,10 @@ export const FormSignIn : FC = () => {
     const onSubmit = () => dispatch(UserAction.signIn(new SignInRequest(values)))
 
     return  <FormBasicContainer>
+
         <FormInputText label={t('form_input_label.email')} control={control} name={'email'} />
         <FormInputText label={t('form_input_label.password')} control={control} name={'password'}/>
+
         <ButtonFormSubmit title={t('sign_in_title')} isRequesting={isRequesting} control={control} onSubmit={onSubmit}/>
     </FormBasicContainer>
 }

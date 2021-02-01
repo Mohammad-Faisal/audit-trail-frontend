@@ -1,6 +1,6 @@
 import {FC, useEffect, useState} from "react";
 import {Button, Modal} from "antd";
-import {FormEditSites, FormState} from "../forms/FormSite";
+import {FormSite, FormState} from "../forms/FormSite";
 import {SiteAction} from "../../store/site/SiteAction";
 import {useDispatch, useSelector} from "react-redux";
 import {selectFinished} from "../../store/misc/finished/FinishedSelector";
@@ -24,14 +24,14 @@ export const ModalCreateForm:FC = () => {
     }
 
     return <>
-        <Button onClick={() => showModal()}>Create New Site</Button>
+        <Button type={'dashed'} onClick={() => showModal()}>Create New Site</Button>
 
         <Modal
             visible={visibility}
             closable={true}
             footer={null}
         >
-            <FormEditSites formState={FormState.CREATE}/>
+            <FormSite formState={FormState.CREATE}/>
         </Modal>
     </>
 }

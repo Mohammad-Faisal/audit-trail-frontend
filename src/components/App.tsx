@@ -16,10 +16,6 @@ const App: FC = ()=> {
     <div className="App">
         <Suspense fallback={<LoadingIndicator />}>
             <Topbar />
-            <PageTopContainer>
-                <h1>Site Data</h1>
-                <ModalCreateForm />
-            </PageTopContainer>
             <SiteTable />
             <ModalAuthentication />
             <LoadingIndicator />

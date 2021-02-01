@@ -6,8 +6,6 @@ import {FormSignIn} from "../forms/FormSignIn";
 import {useTranslation} from "react-i18next";
 import {FormSignUp} from "../forms/FormSignUp";
 
-
-
 enum PageState {
     SIGN_IN,
     SIGN_UP
@@ -16,7 +14,7 @@ enum PageState {
 export const ModalAuthentication:FC = () => {
 
     const {t} = useTranslation();
-    const [pageState , setPageState] = useState<PageState>(PageState.SIGN_IN)
+    const [pageState , setPageState] = useState<PageState>(PageState.SIGN_UP)
     const isSignedIn = useSelector(selectLoggedInState)
 
 
@@ -29,9 +27,9 @@ export const ModalAuthentication:FC = () => {
             footer={null}
         >
 
-            <Radio.Group onChange={changePageState} defaultValue={PageState.SIGN_IN} buttonStyle="solid">
-                <Radio.Button value={PageState.SIGN_IN}>{t('sign_in_title')}</Radio.Button>
+            <Radio.Group onChange={changePageState} defaultValue={PageState.SIGN_UP} buttonStyle="solid">
                 <Radio.Button value={PageState.SIGN_UP}>{t('sign_up_title')}</Radio.Button>
+                <Radio.Button value={PageState.SIGN_IN}>{t('sign_in_title')}</Radio.Button>
             </Radio.Group>
 
             {pageState === PageState.SIGN_IN && <FormSignIn />}
