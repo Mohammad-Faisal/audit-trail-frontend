@@ -1,6 +1,6 @@
 export class ApiEndpoints{
 
-    static BASE_URL:string = 'http://localhost:3200/api/v1';
+    static BASE_URL:string = 'http://18.141.57.99:3200/api/v1';
 
     static user = {
         signIn: `${ApiEndpoints.BASE_URL}/user/signIn`,
