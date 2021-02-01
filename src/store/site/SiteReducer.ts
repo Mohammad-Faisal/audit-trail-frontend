@@ -10,18 +10,19 @@ const initialState ={
 }
 
 const siteReducer = createReducer(initialState, {
+
     [ActionUtility.getFulfilledAction(SiteAction.GET_SITES)]:(state , action) => {
-        state.sites=action.payload.data.data
+        state.sites=action.payload.data
     },
-    [SiteAction.CLEAR_SITE]:(state , action) => {
-        state.sites= []
-    },
-    [SiteAction.SET_SITE]:(state , action) => {
+
+    [SiteAction.SET_SITE_DATA_FOR_EDIT]:(state , action) => {
         state.siteForEdit= action.payload
     },
-    [SiteAction.CLEAR_SITE_DATA]:(state , action) => {
+
+    [SiteAction.CLEAR_SITE_DATA_FOR_EDIT]:(state , action) => {
         state.siteForEdit= {id:-1}
     },
+
 });
 
 export default siteReducer;

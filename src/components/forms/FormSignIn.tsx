@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React, {FC, useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {FormBasicContainer} from "../common-components/layout/FormStyles";
 import {FormInputText} from "./common/FormInputText";
@@ -11,6 +11,7 @@ import {UserAction} from "../../store/user/UserAction";
 import FormValidationConstants from "./common/FormValidationConstants";
 import {SignInInputs, SignInRequest} from "../../store/user/request-models/SignInRequest";
 import {AnyObjectSchema} from "yup";
+import {selectFinished} from "../../store/misc/finished/FinishedSelector";
 
 
 const INITIAL_STATE : SignInInputs = {
@@ -30,11 +31,14 @@ export const FormSignIn : FC = () => {
     const {t} = useTranslation();
     const { control, values } = useFormInputValidation(INITIAL_STATE, VALIDATION_SCHEMA)
     const isRequesting = useSelector(state => selectRequesting(state , [UserAction.SIGN_IN]))
+    const isFinished = useSelector(state => selectFinished(state , [UserAction.SIGN_IN]))
+
+    useEffect(() => {
+        if(isFinished)control.resetData();
+    },[isFinished])
 
 
-    const onSubmit = () => {
-        dispatch(UserAction.signIn(new SignInRequest(values)))
-    }
+    const onSubmit = () => dispatch(UserAction.signIn(new SignInRequest(values)))
 
     return  <FormBasicContainer>
         <FormInputText label={t('form_input_label.email')} control={control} name={'email'} />

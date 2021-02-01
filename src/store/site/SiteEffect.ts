@@ -10,21 +10,17 @@ export class SiteEffect {
 
     static getSites = async (data: GetSitesRequest) => {
         const endPoint = ApiEndpoints.site.getSites
-        return EffectUtility._postToModel(ServerGeneralizedResponse, endPoint, new BaseRequest(data))
-        //return await HttpUtility.postData(endpoint, new BaseRequest(data))
+        return await EffectUtility._postToModel(ServerGeneralizedResponse, endPoint, new BaseRequest(data))
     }
 
     static createSite = async (data: CreateOrUpdateSiteRequest) => {
         const endPoint = ApiEndpoints.site.createSite
-        return EffectUtility._postToModel(ServerGeneralizedResponse, endPoint, new BaseRequest(data))
-        //return await HttpUtility.postData(endpoint, new BaseRequest(data))
+        return await EffectUtility._postToModel(ServerGeneralizedResponse, endPoint, new BaseRequest(data))
     }
 
     static updateSite = async (data: CreateOrUpdateSiteRequest) => {
         const endPoint = ApiEndpoints.site.updateSite
-        return EffectUtility._postToModel(ServerGeneralizedResponse, endPoint, new BaseRequest(data))
-        //return await HttpUtility.postData(endpoint, new BaseRequest(data))
+        return await EffectUtility._postToModel(ServerGeneralizedResponse, endPoint, new BaseRequest(data))
     }
-
 
 }
