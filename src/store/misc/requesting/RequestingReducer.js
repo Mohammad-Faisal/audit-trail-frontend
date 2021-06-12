@@ -1,4 +1,3 @@
-
 import { createAction, createReducer } from '@reduxjs/toolkit'
 const initialState = {}
 const resetAction = createAction('reset-tracked-loading-state')

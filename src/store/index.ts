@@ -1,40 +1,52 @@
-import errorReducer from "./misc/error/ErrorReducer";
-import requestingReducer from "./misc/requesting/RequestingReducer";
-import siteReducer from "./site/SiteReducer";
-import {configureStore, getDefaultMiddleware} from "@reduxjs/toolkit";
-import siteMiddleware from "./site/SitePostEffect";
-import userMiddleware from "./user/UserPostEffect";
-import userReducer from "./user/UserReducer";
-import finishedReducer from "./misc/finished/FinishedReducer";
-import commonReducer from "./misc/common/CommonReducer";
-import errorPostEffect from "./misc/error/ErrorPostEffect";
+import errorReducer from './misc/error/ErrorReducer';
+import requestingReducer from './misc/requesting/RequestingReducer';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import userMiddleware from './user/UserPostEffect';
+import userReducer from './user/UserReducer';
+import finishedReducer from './misc/finished/FinishedReducer';
+import commonReducer from './misc/common/CommonReducer';
+import errorPostEffect from './misc/error/ErrorPostEffect';
+import serviceReducer from './service/ServiceReducer';
+import serviceMiddleware from './service/ServicePostEffect';
+import orderReducer from './order/OrderReducer';
+import orderMiddleware from './order/OrderPostEffect';
+import { persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import { PersistPartial } from 'redux-persist/es/persistReducer';
 
 const rootReducer = {
-    site: siteReducer ,
-    user: userReducer ,
+    service: serviceReducer,
+    order: orderReducer,
+    user: userReducer,
     error: errorReducer,
     requesting: requestingReducer,
     finished: finishedReducer,
     common: commonReducer,
 };
 
-
-
 const middleware = [
-    ...getDefaultMiddleware(),
+    ...getDefaultMiddleware({
+        serializableCheck: {
+            // Ignore these action types
+            ignoredActions: ['*'],
+            // Ignore these field paths in all actions
+            ignoredActionPaths: ['meta.arg', 'payload.timestamp'],
+            // Ignore these paths in the state
+            ignoredPaths: [''],
+        },
+    }),
     errorPostEffect,
     userMiddleware,
-    siteMiddleware
+    serviceMiddleware,
+    orderMiddleware,
 ];
-
-
 
 const rootStore = configureStore({
     reducer: rootReducer,
+
     middleware,
 });
 
-
-export type RootState = ReturnType<typeof rootStore.getState>
+export type RootState = ReturnType<typeof rootStore.getState>;
 
 export default rootStore;

@@ -1,5 +1,5 @@
 import CommonAction from "../common/CommonAction";
-import HttpErrorResponseModel from "../../../utils/HttpErrorResponseModel";
+import HttpErrorResponseModel from "../../utils/HttpErrorResponseModel";
 
 const errorPostEffect = (state) => (next) => (action) => {
     const response = action.payload;

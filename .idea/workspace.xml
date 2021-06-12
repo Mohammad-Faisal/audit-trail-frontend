@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="92b3aeea-a3e2-4423-aec4-8cebbfdd6a29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.prettierrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/order/OrderAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/order/OrderEffect.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/order/OrderPostEffect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/order/OrderReducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/order/OrderSelector.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/order/requests/ChangeOrderStatusRequest.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/order/requests/GetOrdersRequest.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/order/requests/GiveReviewRequest.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/service/requests/CreateServiceRequest.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/service/requests/GetFilteredServicesRequests.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/forms/common/FormInputRadio.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/forms/common/FormInputSlider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/forms/common/FormInputTextArea.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/forms/common/SelectionItemModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/pages/PageGeneralUser.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/pages/PageServiceProvider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/pages/home/FormFilterService.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/pages/home/IndividualService.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/pages/home/PageHome.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/pages/order/FormGiveOrderReview.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/pages/order/ModalReviewOrder.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/pages/order/OrdersTable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/pages/order/PageOrderManagement.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/pages/service/FormCreateService.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/pages/service/PageServiceManagement.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/pages/service/TableService.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/tables/SiteTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/amag-assignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/toptal-assignment-frontend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/App.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/buttons/ButtonFormSubmit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/buttons/ButtonFormSubmit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common-components/layout/FormStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/common-components/layout/FormStyles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common-components/loader/LoadingIndicator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/common-components/loader/LoadingIndicator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common-components/loader/loading.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/common-components/loader/loading.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common-components/navigation/Topbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/common-components/navigation/Topbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common-components/notification/ModalMessage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/common-components/notification/ModalMessage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common-components/notification/ToastMessage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/common-components/notification/ToastMessage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/forms/FormSignIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/forms/FormSignIn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/forms/FormSignUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/forms/FormSignUp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/forms/FormSite.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/forms/common/FormInputText.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/forms/common/FormInputText.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/forms/common/FormValidationConstants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/forms/common/FormValidationConstants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/forms/common/useFormInputValidation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/forms/common/useFormInputValidation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modals/ModalAuthentication.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/modals/ModalAuthentication.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modals/ModalCreateForm.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modals/ModalEditForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/modals/ModalEditForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tables/AuditLogTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/tables/AuditLogTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tables/SiteTable.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/ApiEndpoints.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/ApiEndpoints.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/GeneralConstants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/GeneralConstants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/misc/error/ErrorPostEffect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/misc/error/ErrorPostEffect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/misc/requesting/RequestingReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/misc/requesting/RequestingReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/site/SiteAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/service/ServiceAction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/site/SiteEffect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/service/ServiceEffect.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/site/SitePostEffect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/service/ServicePostEffect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/site/SiteReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/service/ServiceReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/site/SiteSelector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/service/ServiceSelector.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/site/request-models/CreateOrUpdateSiteRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/order/requests/PlaceOrderRequest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/site/request-models/GetSitesRequest.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/user/UserEffect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/UserEffect.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/user/UserReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/UserReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/user/UserSelector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/UserSelector.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/user/request-models/SignInRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/request-models/SignInRequest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/user/request-models/SignUpRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/user/request-models/SignUpRequest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/utils/ActionUtility.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/utils/ActionUtility.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/BaseRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/utils/BaseRequest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/EffectUtility.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/utils/EffectUtility.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/HttpErrorResponseModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/utils/HttpErrorResponseModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/HttpUtility.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/utils/HttpUtility.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/ServerGeneralizedResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/utils/ServerGeneralizedResponse.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1toANZdYeuotbGbzCoHNfkZndMR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/forms/common" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/forms/common" />
+      <recent name="$PROJECT_DIR$/src/views/pages/order" />
+      <recent name="$PROJECT_DIR$/src/views/pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/common-components/navigation" />
+      <recent name="$PROJECT_DIR$/src/views/pages/order" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="92b3aeea-a3e2-4423-aec4-8cebbfdd6a29" name="Default Changelist" comment="" />
+      <created>1623425028984</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623425028984</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

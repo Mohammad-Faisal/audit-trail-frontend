@@ -1,9 +1,9 @@
 import {SignInRequest} from "./request-models/SignInRequest";
 import {SignUpRequest} from "./request-models/SignUpRequest";
 import {ApiEndpoints} from "../../constants/ApiEndpoints";
-import BaseRequest from "../../utils/BaseRequest";
-import EffectUtility from "../../utils/EffectUtility";
-import ServerGeneralizedResponse from "../../utils/ServerGeneralizedResponse";
+import BaseRequest from "../utils/BaseRequest";
+import EffectUtility from "../utils/EffectUtility";
+import ServerGeneralizedResponse from "../utils/ServerGeneralizedResponse";
 
 
 export class UserEffect {

@@ -1,4 +1,4 @@
-import HttpErrorResponseModel from "../../utils/HttpErrorResponseModel";
+import HttpErrorResponseModel from "./HttpErrorResponseModel";
 
 export class ActionUtility {
 
