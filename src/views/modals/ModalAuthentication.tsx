@@ -1,7 +1,6 @@
 import { FC, useState } from 'react';
-import { Button, Modal, Radio, RadioChangeEvent } from 'antd';
+import { Button, Modal } from 'antd';
 import { FormSignIn } from '../forms/FormSignIn';
-import { useTranslation } from 'react-i18next';
 import { FormSignUp } from '../forms/FormSignUp';
 import logo from '../common-components/navigation/logo.jpg';
 enum PageState {
@@ -10,11 +9,8 @@ enum PageState {
 }
 
 export const ModalAuthentication: FC = () => {
-    const { t } = useTranslation();
     const [pageState, setPageState] = useState<PageState>(PageState.SIGN_UP);
     const [visibility, setVisibility] = useState(false);
-
-    const changePageState = (e: RadioChangeEvent) => setPageState(e.target.value);
 
     const changeVisibility = () => setVisibility((prev) => !prev);
 
@@ -45,7 +41,6 @@ export const ModalAuthentication: FC = () => {
                             <Button type={'link'} onClick={() => setPageState(PageState.SIGN_IN)}>
                                 {'Sign In here'}
                             </Button>
-                            <div></div>
                         </div>
                     ) : (
                         <div style={{ marginTop: '20px', display: 'grid', gridTemplateColumns: 'auto auto 1fr', alignItems: 'center' }}>

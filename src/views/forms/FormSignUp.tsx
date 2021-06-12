@@ -24,7 +24,7 @@ const INITIAL_STATE: SignUpInput = {
 
 const VALIDATION_SCHEMA: AnyObjectSchema = Yup.object({
     name: FormValidationConstants.REQUIRED_AND_STRING_ONLY,
-    email: FormValidationConstants.VALID_EMAIL,
+    email: FormValidationConstants.REQUIRED_VALID_EMAIL,
     password: Yup.string().min(6, 'Minimum 6 Characters'),
 });
 

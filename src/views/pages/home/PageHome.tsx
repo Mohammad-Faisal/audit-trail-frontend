@@ -29,7 +29,9 @@ export const PageHome = () => {
 const ServicesContainer = styled.div`
     padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
 `;
 
 const HomePageContainer = styled.div`

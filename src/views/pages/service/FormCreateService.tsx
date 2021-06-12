@@ -3,19 +3,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FormBasicContainer } from '../../common-components/layout/FormStyles';
 import { FormInputText } from '../../forms/common/FormInputText';
 import ButtonFormSubmit from '../../buttons/ButtonFormSubmit';
-import { useTranslation } from 'react-i18next';
 import useFormInputValidation from '../../forms/common/useFormInputValidation';
 import * as Yup from 'yup';
 import { selectRequesting } from '../../../store/misc/requesting/RequestingSelector';
-import { UserAction } from '../../../store/user/UserAction';
 import FormValidationConstants from '../../forms/common/FormValidationConstants';
-import { SignInInputs, SignInRequest } from '../../../store/user/request-models/SignInRequest';
 import { AnyObjectSchema } from 'yup';
 import { selectFinished } from '../../../store/misc/finished/FinishedSelector';
 import { FormInputRadio, RadioTypes } from '../../forms/common/FormInputRadio';
 import { ServiceAction } from '../../../store/service/ServiceAction';
 import { CreateServiceRequest, ServiceInputs } from '../../../store/service/requests/CreateServiceRequest';
 import { ServiceType } from '../../../constants/GeneralConstants';
+import { Form } from 'antd';
+import { FormInputTextArea } from '../../forms/common/FormInputTextArea';
 
 const INITIAL_STATE: ServiceInputs = {
     name: '',
@@ -35,7 +34,6 @@ const VALIDATION_SCHEMA: AnyObjectSchema = Yup.object({
 
 export const FormCreateService: FC = () => {
     const dispatch = useDispatch();
-    const { t } = useTranslation();
 
     const { control, values } = useFormInputValidation(INITIAL_STATE, VALIDATION_SCHEMA);
     const isRequesting = useSelector((state) => selectRequesting(state, [ServiceAction.CREATE_SERVICE]));
@@ -46,19 +44,19 @@ export const FormCreateService: FC = () => {
     }, [isFinished]);
 
     const onSubmit = () => {
-        console.log(values);
         dispatch(ServiceAction.createService(new CreateServiceRequest(values)));
     };
 
     return (
         <FormBasicContainer>
-            <FormInputText label={'Name'} control={control} name={'name'} />
-            <FormInputText label={'Description'} control={control} name={'description'} />
-            <FormInputText label={'Hourly Rate '} control={control} name={'hourlyRate'} />
-            <FormInputText label={'Preferred Hours '} control={control} name={'preferredHour'} />
-            <FormInputRadio control={control} label={'Service Type'} name={'type'} type={RadioTypes.SERVICE_TYPE} />
-
-            <ButtonFormSubmit title={'Create New Service'} isRequesting={isRequesting} control={control} onSubmit={onSubmit} />
+            <Form>
+                <FormInputText label={'Name'} control={control} name={'name'} />
+                <FormInputTextArea label={'Description'} control={control} name={'description'} />
+                <FormInputText label={'Hourly Rate '} control={control} name={'hourlyRate'} />
+                <FormInputText label={'Preferred Hours '} control={control} name={'preferredHour'} />
+                <FormInputRadio control={control} label={'Service Type'} name={'type'} type={RadioTypes.SERVICE_TYPE} />
+                <ButtonFormSubmit title={'Create New Service'} isRequesting={isRequesting} control={control} onSubmit={onSubmit} />
+            </Form>
         </FormBasicContainer>
     );
 };

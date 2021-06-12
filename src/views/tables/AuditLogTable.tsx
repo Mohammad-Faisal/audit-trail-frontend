@@ -1,14 +1,13 @@
-import {FC} from "react";
-import {useDispatch} from "react-redux";
+import { FC } from 'react';
+import { useDispatch } from 'react-redux';
 
-import { Table} from "antd";
-import {ModalEditForm, Site} from "../modals/ModalEditForm";
+import { Table } from 'antd';
+import { ModalEditForm, Site } from '../pages/service/ModalEditForm';
 
-interface Props{
-    tableData:[]
+interface Props {
+    tableData: [];
 }
-export const AuditLogTable: FC<Props> = ({tableData}) => {
-
+export const AuditLogTable: FC<Props> = ({ tableData }) => {
     console.log(tableData);
 
     const columns = [
@@ -21,8 +20,8 @@ export const AuditLogTable: FC<Props> = ({tableData}) => {
             title: 'Description',
             dataIndex: 'description',
             key: 'description',
-        }
+        },
     ];
 
     return <Table dataSource={tableData} columns={columns} />;
-}
+};

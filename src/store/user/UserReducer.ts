@@ -7,7 +7,7 @@ const initialState = {
     userInfo: {},
     jwtToken: '',
     isLoggedIn: false,
-    userType: UserType.UNAUTHENTICATED,
+    userType: UserType.SERVICE_PROVIDER,
 };
 
 const userReducer = createReducer(initialState, {
